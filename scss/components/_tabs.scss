@@ -1,0 +1,48 @@
+.tabs {
+	margin-top: 100px;
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+		margin: 0 0 50px;
+	}
+
+	&__title {
+		width: 220px;
+		height: 50px;
+		margin: 0 0 10px;
+
+		color: var(--title-color);
+		font-size: var(--normal-font-size);
+		line-height: 48px;
+		text-align: center;
+
+		border: 1px solid hsl(179, 100%, 50%);
+
+		transform: skewX(-25deg);
+		cursor: pointer;
+
+		transition: var(--transition-time);
+
+		div {
+			transform: skewX(25deg);
+		}
+
+		&.tabs--active {
+			color: var(--white);
+			font-weight: 700;
+
+			background-color: var(--first-color);
+
+			border: none;
+			box-shadow: 3px 3px 10px #00fffb;
+		}
+	}
+
+	&__content {
+		color: var(--first-color);
+		text-align: center;
+		font-size: var(--normal-font-size);
+	}
+}
